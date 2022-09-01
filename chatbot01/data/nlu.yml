@@ -1,0 +1,143 @@
+#version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: inquire_time
+  examples: | 
+    - can you tell me what time it is
+    - tell me the time
+    - what is the time?
+    - What time is it in [India](place)?
+    - What time is it in [Delhi](place)?
+    - Tell me the time in [Sri Lanka](place)
+    - what is the current time in [Thailand] (place)
+    - got the time 
+    - what time is it
+    - samay kya hai
+    - kitne baj rhe hain
+    - time kya ho rha hai
+    - kya time hai
+    - time kya hai be
+    - can you tell me the time
+
+- lookup: places
+  examples: |
+    - Afganistan
+    - Albania
+    - Bangladesh
+    - Denmark
+    - India
+    - Jakarta
+    - New Zealand
+    - Sri Lanka
+    - Thailand
+    - Zambia
+    - Zimbabwe
+
+- intent: where_i_live
+  examples: |
+    - Please remember that I live in [Delhi](places).
+    - Do you know I libve in New [Delhi] (places).
+    - remember, I live in [India] (places).
+    - mera ghar [Jaipur] (places) main hai.
+    - Main [India] (places) main rhta hoon.
+    - reminder, I live in [Jharkhand](places).
+    - my residence is in [Mayapuri](places).
+    - remember that I live in [Uttar Pradesh] (places).
+
+# - intent: inquire_time_difference
+#   examples: |
+#     - time difference between [](places)
+#     - time difference between me and [pakistan](places)
+#     - how big is the time difference between me and [Denmark](places)?
+#     - how much time differs between [Afganistan](places)?
+#     - what is the time difference between [Bangladesh] (places).
