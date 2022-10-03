@@ -1,0 +1,215 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - fine
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: tell_name
+  examples: |
+    - what is your name?
+    - tell me your name
+    - what others call you
+    - what should i call you?
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: my_name
+  examples: |
+    - my name is [ashish]{"entity":"name", "value":"ashish"}
+    - my name is [rahul]{"entity":"name","value":"rahul"}
+    - my name is [apneet]{"entity":"name","value":"apneet"}
+    - [ashish]{"entity":"name","value":"ashish"} is my name
+    - [ashish]{"entity":"name","value":"ashish"} this side
+    - people call me [ashish]{"entity":"name","value":"ashish"}
+    - [harshita]{"entity":"name","value":"harshita"} this side
+    - people call me [harshita]{"entity":"name","value":"harshita"}
+    -I'm [harshita]{"entity":"name", "value":"harshita"}.
+
+- intent: mobile_number
+  examples: |
+    - my number is [8209829808]{"entity":"number"}
+    - [8209829808]{"entity":"number"}
+    - [8209829808]{"entity":"number"} is my number
+    - my nobile number is [8209829808]{"entity":"number"}
+
+- intent: play_video
+  examples: |
+    - play the mentioned video
+    - open the url
+    - open the link in browser
+    - show me the video that i asked for
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?
+
+
+# - intent: chitchat/ask_name
+#   examples: |
+#     - what is your name?
+#     - tell me your name
+#     - what others call you
+#     - what should i call you?
+#     - May I know your name?
+#     - Do you have a name for yourself?
+
+
+# - intent: chitchat/ask_whether
+#   examples: |
+#     - what is the weather?
+#     - tell me about the weather.
+#     - What's the weather like today?
+#     - Oh, do you mind checking the weather for me please?
+#     - I like sunny days in Delhi
+
+
+# 30.9.2022
+
+- intent: inquire_time
+# need to specify the place because it will compare with uct 
+  examples: |
+    - what time is it?
+    - what time is it in [Amsterdam](place)?
+    - what time is it in [London](place)?
+    - tell me the time in [Lisbon](place)
+    - what is the current time in [Berlin](place)
+    - what time is it in [amsterdam](place)[amsterdam](place)
+    - what is the time?
+    - what time ?
+    - time ?
+    - what is time in [delhi](place)?
+    - What is the time in India?
+
+
+
+- lookup: place
+  examples: |
+    - brussels
+    - zagreb
+    - london
+    - lisbon
+    - amsterdam
+    - seattle
+    - New Delhi
+    - India
+    - Delhi
+    - delhi
+    - London
+# case sensitivity issue? but why 
+
+- intent: where_i_live
+  examples: |
+    - please remember that i live in [Amsterdam](place)?
+    - my house is in [London](place)?
+    - reminder. i live in [Lisbon](place)
+    - my residence is in [Berlin](place)
+    - remember that i live in [london](place)
+
+- intent: inquire_time_difference
+  examples: |
+    - time difference between [Amsterdam](place)?
+    - what is my time difference with [London](place)?
+    - how big is the time delta with [Berlin](place)?
+    - is there a time difference with [Lisbon](place)?
+    - what is the time difference with [amsterdam](place)
+    - how big is the time delta with [Berlin](place)?
+    - what is my time difference between [India](place)?
+    - what is my time difference with [Delhi](place)?
+    - what is the time difference between me and [India](place)?
+    
+
+#1.10.2022
+- intent: query_books
+  examples: |
+    - show me [books]{"entity": "object_type", "value": "book"} by [George Orwell](author)
+    - can you recommend [books]{"entity": "object_type", "value": "book"} written by [J. K. Rowling](author)?
+
