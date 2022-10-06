@@ -1,0 +1,68 @@
+version: "2.0"
+
+stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+- story: happy greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: happy path
+  steps:
+  - intent: request_details
+  - action: utter_first_name
+  - intent: FirstName
+  - action: utter_happy
+
+
+
+
+ - story: query fantasy genre
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: query_books
+      entities:
+      - genres: fantasy
+      - object_type: book
+    - slot_was_set:
+      - object_type: book
+    - slot_was_set:
+      - genres: fantasy
+    - action: action_query_knowledge_base
+    - intent: know_more
+      entities:
+      - attribute: summary
+      - mention: '1'
+    - slot_was_set:
+      - mention: '1'
+    - slot_was_set:
+      - attribute: summary
+    - action: action_query_knowledge_base
