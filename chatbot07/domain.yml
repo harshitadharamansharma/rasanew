@@ -1,0 +1,59 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Haha."
+
+
+
+  what_are_you_looking_for:
+  - text: "What are you looking for?"
+    buttons:
+      - title: "Want to know about us"
+        payload: "/know_about_us"
+      - title: "Want to book a tial class"
+        payload: "/book_trial_classes"
+
+  
+  Know_more:
+  - text: "What you want to know?"
+    buttons:
+      # - title: "want to know about expert tutors"
+      #   payload: "/know_about_subjects"
+      - title: "Want to know more about available subjects"
+        payload: "/know_about_subjects"
+      - title: "Want to know about branches"
+        payload: "/know_about_classes"
+        
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+

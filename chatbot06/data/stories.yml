@@ -44,8 +44,8 @@ stories:
 
 
 
- - story: query fantasy genre
-    steps:
+- story: query fantasy genre
+  steps:
     - intent: greet
     - action: utter_greet
     - intent: query_books

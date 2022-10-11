@@ -49,19 +49,19 @@ stories:
 
   - story: join movie and rating
     steps:
-      - intent: query_movies
-        entities:
-          - object_type: movie
-          - director: Peter Jackson
-      - slot_was_set:
-          - object_type: movie
-      - slot_was_set:
-          - director: Peter Jackson
-      - action: action_query_knowledge_base
-      - intent: know_more
-      - slot_was_set:
-          - object_type: rating
-      - action: action_query_knowledge_base
+    - intent: query_movies
+      entities:
+        - object_type: movie
+        - director: Peter Jackson
+    - slot_was_set:
+        - object_type: movie
+    - slot_was_set:
+        - director: Peter Jackson
+    - action: action_query_knowledge_base
+    - intent: know_more
+    - slot_was_set:
+        - object_type: rating
+    - action: action_query_knowledge_base
 
   - story: join movie and rating 2
     steps:

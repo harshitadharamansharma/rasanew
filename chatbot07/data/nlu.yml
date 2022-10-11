@@ -1,0 +1,155 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - happy
+    - fine
+
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+- intent: know_about_us 
+  examples: |
+    - I want to know about the classes
+    - tell me about your classes.
+    - what are the classes
+  
+    - What services are you providing?
+    - what are you offering.
+    - know more your services?
+    - tell me more ablout your services?
+    - tell me about your classes
+    - can your tell me about the classes?
+    - yes, I want to know about you.
+    - What is expertutors?
+    - please tell me about coaching classes 
+    
+
+- intent: book_trial_classes
+  examples: |
+    - I want to book a trial class
+    - Please book a demo class
+    - book a demo class foer me
+    - schedule a demo class
+    - book a [maths](subject) tial class for me.
+    - schedule a trial class for me.
+    - schedule a trial class for me on [12.12.2022](date).
+    - schedule a trial class for me on [12 December, 2022](date).
+    
+
+- intent: where_branches
+  examples: |
+    - Where are your bracnches?
+    - where are your centers?
+    - where are your located?
+    - Are you located in [Janakpuri](branches)?
+    - Are you in [Vikaspuri](branches)?
+    
+- intent: know_about_subjects
+  examples: |
+    - What subjects do you teach?
+    - What are the subjects do you teach?
+    - what are the available subjects?
+    - Can I know about all the subjects?
+
+
+# - intent: subjects_for_class
+#   examples: |
+#     - hkhjkjh
+
+# - intent: know_about_courses
+#   examples: |
+#     - weekly/daily/crash courses
+
+# - intent: know_about_
+#   examples: |
+#     - Where are your bracnches?
+
+
