@@ -1,0 +1,31 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: "Answer steps and procedure when user asks how to apply "
+# redicect to the admission portal
+# specific if if entity program_type is specified (ug, pg, ...)
+  steps: 
+  - intent: How_to_apply
+  - action: utter_how_to_apply
+
+- rule: "Answer steps and procedure when user asks how to apply "
+# redicect to the sol admission portal :-     https://sol.du.ac.in/
+  steps: 
+  - intent: know_about_SOL_admissions
+  - action: utter_SOL_admissions
+
+# - rule: " Show academic calendar"
+#   steps: 
+#   - intent: show_academic_calendar
+#   - action: display_calendar

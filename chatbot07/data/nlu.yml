@@ -138,7 +138,7 @@ nlu:
     - What are the subjects do you teach?
     - what are the available subjects?
     - Can I know about all the subjects?
-
+ 
 
 # - intent: subjects_for_class
 #   examples: |

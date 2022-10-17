@@ -41,7 +41,7 @@ responses:
 
   
   Know_more:
-  - text: "What you want to know?"
+  - text: "What do you want to know?"
     buttons:
       # - title: "want to know about expert tutors"
       #   payload: "/know_about_subjects"

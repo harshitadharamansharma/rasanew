@@ -1,0 +1,363 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - happy
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: Know_about_admissions
+  examples: |
+      - I want to know about admissions?
+      - can I know details regarding admission?
+      - I want to take admission in [bachelor's degree](program_type)
+      - I want to take admission in [B.A. program](course) 
+# course list from lookup table
+      - Can You tell me about admiissions
+      - I want to Know about [UG]{"entity":"program_type", "value":"UG"} admissions.
+      - I want to Know about [PG]{"entity":"program_type", "value":"PG"} admissions.
+      - I want to Know about [Ph.D]{"entity":"program_type", "value":"Ph.D."} admissions.
+      - I want to Know about [Dploma courses]{"entity":"program_type", "value":"diploma"} admissions.
+      - I want to Know about [Doctorate]{"entity":"program_type", "value":"Ph.D."} admissions.
+      - I want to Know about [Ph.D]{"entity":"program_type", "value":"Ph.D."} admissions.
+      - I want to Know about [M.phil.]{"entity":"program_type", "value":"other"} admissions.
+#Discuss: I think instead of value these should be assigned as enity roles
+# -   entity program_type:- ug, pg, Ph.D.,Diploma,short term course
+
+- intent: How_to_apply
+  examples: | 
+      - How to apply
+      - How to apply online or offline
+      - Do we need to apply online?
+      - can I apply offline?
+      - What is the procedure to apply
+      - How to take admission ?
+      - I want admission in xYZ college 
+
+- intent: know_about_SOL_admissions
+  examples: | 
+      - I want to take admission in Sol
+      - How to take admission in SOL
+      - school of open learning admission 
+      - I want to know about SOL admissions 
+      
+      
+
+- lookup: program_type
+  examples: |
+    - UG
+    - PG
+    - Ph.D
+    - NCWEB
+    - Certificate/Diploma
+
+
+
+- lookup: UG
+  examples: |
+# Undergraduate Programs Arts, Humanities and Social Sciences
+
+    - B.A. (Hons.) Arabic
+    - B.A. (Hons.) Bengali
+    - B.A. (Hons.) English
+    - B.A. (Hons.) French
+    - B.A. (Hons.) German
+    - B.A. (Hons.) Hindi
+    - B.A. (Hons.) Italian
+    - B.A. (Hons.) Persian
+    - B.A. (Hons.) Punjabi
+    - B.A. (Hons.) Sanskrit
+    - B.A. (Hons.) Spanish
+    - B.A. (Hons.) Urdu
+
+# B.A. (Hons.) Applied Psychology
+# B.A. (Hons.) Psychology
+# B.A. (Hons.) Economics
+# B.A. (Hons.) Geography
+# B.A. (Hons.) Hindi Patrakarita
+# B.A. (Hons.) History
+# B.A. (Hons.) Humanities and Social Sciences
+# B.A. (Hons.) Journalism
+# Five Year Integrated Program in Journalism
+#  B.A. (Hons.) Multi-Media and Mass
+# Communication
+# B.A. (Hons.) Philosophy
+# B.A. (Hons.) Political Science
+# B.A. (Hons.) Social Work
+# B.A. (Hons.) Sociology
+# B.A. (Program)
+
+# Undergraduate Programs in Sciences, Mathematics and Technology
+# B.Sc (Hons.) Anthropology B.Sc (Hons.) Biological Sciences
+# B.Sc (Hons.) Botany B.Sc (Hons.) Zoology
+# B.Sc.(Hons.) Biomedical Science B.Sc (Hons.) Bio-Chemistry
+# B.Sc (Hons.) Chemistry B.Sc (Hons.) Physics
+# B.Sc (Hons.) Polymer Science B.Sc (Hons.) Computer Science
+# B.Sc (Hons.) Electronics B.Sc (Hons.) Instrumentation
+# B.Sc (Hons.) Environmental Science B.Sc (Hons.) Food Technology
+# B.Sc (Hons.) Geology B.Sc (Hons.) Mathematics
+# B.Sc (Hons.) Statistics B.Sc (Hons.) Microbiology
+# B.Sc (Hons.) Home Science B.Tech. Information Technology and
+# Mathematical Innovations (IT & MI)
+# B.Sc (Pass) Home Science
+# B.Sc (Prog.) Mathematical Sciences
+# B.Sc (Prog.) Applied Physical Sciences with Analytical Methods in Chemistry & Biochemistry
+# B.Sc (Prog.) Applied Physical Sciences with Industrial Chemistry
+# B.Sc (Prog.) Physical Science with Chemistry
+# B.Sc (Prog.) Physical Science with Electronics
+# B.Sc (Prog.) Physical Science with Computer Science/ Informatics Practices
+# B.Sc (Prog.) Applied Life Science
+# B.Sc (Prog.) Life Science
+# B.Sc. in Physical Education, Health Education and Sports B.Sc. (PE, HE&S)
+# Undergraduate Programs in Commerce and Management
+# B.Com (Hons.)
+# B.Com
+# Bachelor of Management Studies (BMS)
+# Bachelor of Business Administration in Financial Investment Analysis (BBA-FIA)
+# Bachelor of Business Economics (BBE)
+# Undergraduate Programs in Vocational studies
+# B.A. Vocational Studies
+# B.Voc. Banking Operations
+# B.Voc. Healthcare Management
+# B.Voc. Printing Technology
+# B.Voc. Retail Management and IT
+# B.Voc. Software Development
+# B.Voc. Web Designing
+# Undergraduate Programs in Music and Fine Arts
+# B.A. (Hons.) in Music: Vocal/ Instrumental Sitar/ Sarod/ Guitar/ Violin/ Santoor)
+# B.A. (Hons.) in Karnatak Music-Vocal/Instrumental (Veena / Violin)
+# B.A. (Hons.) in Hindustani Music: Percussion (Tabla/Pakhawaj)
+# Undergraduate Programs in Education
+# Bachelor of Elementary Education
+#  http://du.ac.in/uploads/new-web/07072022_UG-BOI.pdf
+
+
+- lookup: PG
+  examples: |
+# Faculty of Arts
+    - M.A. Arabic
+    - M.A. Buddhist Studies 
+    - M.A. English 
+    - M.A. French Studies 
+    - M.A. German Studies 
+    - M.A. Hispanic Studies 
+    - M.A. Italian Studies 
+    - M.A. Hindi 
+    - Bachelor of Library and Information Science (PG)
+    - Master of Library & Information Science 
+    - M.A. Linguistics
+    - M.A. Bengali 
+    - M.A. Comparative Indian Literature
+    - M.A. Tamil 
+    - M.A. Persian 
+    - M.A. Philosophy 
+    - M.A. Psychology 
+    - M.A. Applied Psychology 
+    - M.A. Punjabi 
+    - M.A. Sanskrit 
+    - M.A. Russian Studies 
+    - Urdu M.A. Urdu
+
+# Commerce & Business Studies
+# Commerce M.Com. Merit and Entrance Based
+# Education
+# B.Ed. Only Entrance Based
+# Education B.Ed. Special Education Only Entrance Based
+# (Mental Retardation)
+# B.Ed. Special Education (Visual Impairment) Only Entrance Based
+# M.Ed. Only Entrance Based
+# Interdisciplinary & Applied Sciences
+# Biochemistry M.Sc. Bio-Chemistry Merit and Entrance Based
+# Biophysics M.Sc. Bio-Physics Only Entrance Based
+# Electronics Science M.Sc. Electronics Merit and Entrance Based
+# M. Tech. Microwave Electronics Only Entrance Based
+# Genetics M.Sc. Genetics Only Entrance Based
+# Institute of Informatics & Communication M.Sc. Informatics Only Entrance Based
+# Microbiology M.Sc. Microbiology Merit and Entrance Based
+# Physical Education & Sports Sciences Bachelor of Physical Education Only Entrance Based
+# (B.P.ED.)
+# Master of Physical Education Only Entrance Based
+# (M.P.ED.)
+# Plant Molecular Biology M.Sc. Plant Molecular Biology Only Entrance Based
+# & Biotechnology
+# Law
+# Law LL.B. Only Entrance Based
+# LL.M. Only Entrance Based
+#  Total Programs 76
+# http://du.ac.in/uploads/new-web/PG%20BOI%20Revised%20_Final_02052022_compressed.pdf
+
+- lookup: Ph.D.
+  examples: |
+  
+# https://admission.uod.ac.in/userfiles/downloads/PhD2022-2023.pdf
+
+- lookup: NCWEB
+  examples: |
+    - 
+#  https://ncweb.du.ac.in/wp-content/uploads/2022/06/NCWEB-English.pdf
+#  https://ncweb.du.ac.in/admission/
+
+- lookup: Certificate/Diploma
+  examples: |
+    - 
+
+
+- lookup: Certificate/Diploma
+  examples: |
+    - 
+
+
+
+#https://rasa.com/docs/rasa/nlu-training-data/#:~:text=Lookup%20tables%20are%20lists%20of,RegexEntityExtractor%20components%20in%20the%20pipeline.
+- synonym: UG
+  examples: |
+    - Undergraduate
+    - UG
+    - Undergrad
+    - bachelor's degree
+    - bachelor's course
+#check for case sensitivity
+#check for synonym extraction action : https://rasa.com/docs/rasa/reference/rasa/nlu/extractors/entity_synonyms/
+
+# influence of slot on conversation: https://dev.to/petr7555/rasa-synonyms-3ljh
+
+# https://dev.to/petr7555/rasa-synonyms-3ljh
+# entity syntax in rasa
+# https://rasa.com/blog/intents-entities-understanding-the-rasa-nlu-pipeline/
+# https://rasa.com/blog/rasa-nlu-in-depth-part-2-entity-recognition/
+
+# https://github.com/areeshaanjum748/college-enquiry-chatbot-using-RASA/blob/main/rasa-nlu-training-data/nlu.yml
+
+
+- synonym: PG
+  examples: |
+    - Postgraduate
+    - PG
+    - postgrad
+    - gradation degree
+    - master's degree
+    - master's course
+
+
+- synonym: Ph.D.
+  examples: |
+    - 
+    - M.Phil
+
+- synonym: 
+  examples: |
+    - Undergraduate
+    - UG
+    - Undergrad
+    - bachelor's degree
+    - bachelor's course
+
+- synonym: Certificate/Diploma
+  examples: |
+    - Diploma
+    - certificate
+    - short term
+    - midterm
+    - Other courses
+
+
+# - synonym: short term
+#   examples: |
+#     - shortterm
+#     - midterm
+#     - certificate
+
+# - synonym: Other courses
+#   examples: |
+#     - Undergraduate
+#     - UG
+#     - Undergrad
+#     - bachelor's degree
+#     - bachelor's course
+

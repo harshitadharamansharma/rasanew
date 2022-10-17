@@ -1,0 +1,73 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "Hey! I am haha chatbot? What are you looking for?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_SOL_admissions:
+  - text: " You can go to this [website](https://sol.du.ac.in/)."
+  - url: "https://sol.du.ac.in/"
+
+  utter_ask_program_type:
+  - text: "For which program?"
+    buttons:
+      - title: "Undergraduate"
+        payload: /inform{{"program_type":"UG"}}
+      - title: "Postgraduate"
+        payload: /inform{{"program_type":"PG"}}
+      - title: "Ph.D."
+        payload: /inform{{"program_type":"Ph.D."}}
+      - title: "NCWEB"
+        payload: /inform{{"program_type":"NCWEB"}}
+      - title: "Certificate/Diploma"
+        payload: /inform{{"program_type":"Certificate/Diploma"}}
+      - title: "SOL"
+        payload: "/know_about_SOL_admissions"
+# https://forum.rasa.com/t/set-slot-and-entity-with-rasa-buttons/47586     
+  # button payload entity :-   entity program_type:- ug, pg, Ph.D.,Diploma,short term course
+
+  utter_how_to_apply:
+  # redicect to the admission portal
+# specific if if entity program_type is specified (ug, pg, ...)
+  - text: "You can apply online only, 
+            follow these steps: "
+
+ utter_admission_calendar:
+ 
+   
+entities: 
+  - program_type
+  - 
+  
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
