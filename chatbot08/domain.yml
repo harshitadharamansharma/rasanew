@@ -1,27 +1,27 @@
-version: "2.0"
+# version: "2.0"
 
 intents:
-  - greet
+  # - greet
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
+  # - mood_great
+  # - mood_unhappy
   - bot_challenge
 
 responses:
   utter_greet:
   - text: "Hey! I am haha chatbot? What are you looking for?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  # utter_cheer_up:
+  # - text: "Here is something to cheer you up:"
+  #   image: "https://i.imgur.com/nGF1K8f.jpg"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  # utter_did_that_help:
+  # - text: "Did that help you?"
 
-  utter_happy:
-  - text: "Great, carry on!"
+  # utter_happy:
+  # - text: "Great, carry on!"
 
   utter_goodbye:
   - text: "Bye"
@@ -29,9 +29,13 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-  utter_SOL_admissions:
-  - text: " You can go to this [website](https://sol.du.ac.in/)."
-  - url: "https://sol.du.ac.in/"
+  utter_ask_rephrase:
+  - text: "Sorry, I'm not sure I understand. Can you rephrase?"
+  - text: "Can you please rephrase? I did not get that."
+
+  # utter_SOL_admissions:
+  # - text: " You can go to this [website](https://sol.du.ac.in/)."
+  # - image: "https://sol.du.ac.in/"
 
   utter_ask_program_type:
   - text: "For which program?"
@@ -57,8 +61,12 @@ responses:
   - text: "You can apply online only, 
             follow these steps: "
 
- utter_admission_calendar:
+#  utter_admission_calendar:
  
+
+actions:
+- action_query_knowledge_base
+
    
 entities: 
   - program_type

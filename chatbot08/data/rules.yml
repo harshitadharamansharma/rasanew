@@ -2,6 +2,11 @@ version: "2.0"
 
 rules:
 
+- rule: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
@@ -19,11 +24,11 @@ rules:
   - intent: How_to_apply
   - action: utter_how_to_apply
 
-- rule: "Answer steps and procedure when user asks how to apply "
-# redicect to the sol admission portal :-     https://sol.du.ac.in/
-  steps: 
-  - intent: know_about_SOL_admissions
-  - action: utter_SOL_admissions
+# - rule: "Answer steps and procedure when user asks how to apply "
+# # redicect to the sol admission portal :-     https://sol.du.ac.in/
+#   steps: 
+#   - intent: know_about_SOL_admissions
+#   - action: utter_SOL_admissions
 
 # - rule: " Show academic calendar"
 #   steps: 

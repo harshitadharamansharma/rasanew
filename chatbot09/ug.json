@@ -1,0 +1,146 @@
+{
+    "UG": [
+        {
+            "id": 0,
+            "name": "B.A. (Hons.) Sanskrit",
+            "course-description": "This program aims at getting the students acquainted with the general outlines of Classical Sanskrit Literature (Poetry) through classical texts, develop a fair idea of the works of great Sanskrit poets, appreciate the styles and thoughts of individual poets focusing on the poetical, artistic, cultural and historical aspects of their works. This program will enhance competence in chaste classical Sanskrit and give them skills in translation and interpretation of poetic works.",
+            "Bachelor-stream": "Bachelor of Arts",
+            "honours": true,
+            "program": false,
+            "eligibility": "Candidates must appear in CUET in any of the following subject combinations: Combination I: Any one Language from List A + Sanskrit from List B1 + Any two subjects out of which one should be from List B1 OR Combination II: Any one Language from List A + Sanskrit from List A + Any two subjects out of which one should be from List B1 OR Combination III: Sanskrit from List A + Any two subjects from List B1 + Any one subject from either List B1 or List B2 OR Combination IV: Any one Language from List A + Any two subjects from List B1 + Any one subject from either List B1 or List B2 Merit will be based on the best CUET score obtained from any of the above-mentioned combinations of subjects. Candidates who opted for Combination IV for admission will be considered only if seats remain vacant after considering all the candidates who opted for Combination I/II/III",
+            "colleges": [
+                {
+                    "id": 1,
+                    "name": "Aryabhatta College",
+                    "seatMatrix": {
+                        "UR": "23",
+                        "SC": "9",
+                        "ST": "4",
+                        "OBC": "16",
+                        "Minority": "--",
+                        "EWS": "6"
+                    }
+                },
+                {
+                    "id": 2,
+                    "name": "Atma Ram Sanatan Dharma College",
+                    "seatMatrix": {
+                        "UR": "19",
+                        "SC": "7",
+                        "ST": "4",
+                        "OBC": "13",
+                        "Minority": "--",
+                        "EWS": "6"
+                    }
+                },
+                {
+                    "id": 3,
+                    "name": "Bharati College (W)",
+                    "seatMatrix": {
+                        "UR": "31",
+                        "SC": "12",
+                        "ST": "6",
+                        "OBC": "21",
+                        "Minority": "--",
+                        "EWS": "8"
+                    }
+                },
+                {
+                    "id": 4,
+                    "name": "College of Vocational Studies",
+                    "seatMatrix": {
+                        "UR": "23",
+                        "SC": "9",
+                        "ST": "4",
+                        "OBC": "16",
+                        "Minority": "--",
+                        "EWS": "6"
+                    }
+                },
+                {
+                    "id": 5,
+                    "name": "Daulat Ram College (W)",
+                    "seatMatrix": {
+                        "UR": "31",
+                        "SC": "12",
+                        "ST": "6",
+                        "OBC": "21",
+                        "Minority": "--",
+                        "EWS": "8"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "name": "B.A. (Hons.) English",
+            "course-description": "This course is designed to help students define/critique the category of Literature; and understand the emergence of literary studies, textuality, and the canon. This course aims to contest and demystify pre-conceived notions of literature as mimetic representations, underline literature as part of cultural production, firmly embedded in historical specificity, develop language skills in an integrated way through an intense engagement with the prescribed texts and give the learners hands-on practice in the use of these skills.",
+            "honours": true,
+            "Bachelor-stream": "Bachelor of Arts",
+            "program": false,
+            "eligibility": "Candidates must appear in CUET in the following subject combination: English from List A + Any two subjects from List B1 + Any one subject from either List B1 or List B2 Merit will be based on the CUET scores obtained from the above-mentioned combination of subjects.",
+            "colleges": [
+                {
+                    "id": 1,
+                    "name": "Bharati College (W)",
+                    "seatMatrix": {
+                        "UR": "31",
+                        "SC": "12",
+                        "ST": "6",
+                        "OBC": "12",
+                        "Minority": "--",
+                        "EWS": "8"
+                    }
+                },
+                {
+                    "id": 2,
+                    "name": "Daulat Ram College (W)",
+                    "seatMatrix": {
+                        "UR": "19",
+                        "SC": "7",
+                        "ST": "3",
+                        "OBC": "21",
+                        "Minority": "--",
+                        "EWS": "5"
+                    }
+                },
+                {
+                    "id": 3,
+                    "name": "Desh Bandhu College",
+                    "seatMatrix": {
+                        "UR": "31",
+                        "SC": "12",
+                        "ST": "6",
+                        "OBC": "21",
+                        "Minority": "--",
+                        "EWS": "8"
+                    }
+                },
+                {
+                    "id": 4,
+                    "name": "Dyal Singh College",
+                    "seatMatrix": {
+                        "UR": "23",
+                        "SC": "9",
+                        "ST": "4",
+                        "OBC": "16",
+                        "Minority": "--",
+                        "EWS": "6"
+                    }
+                },
+                {
+                    "id": 5,
+                    "name": "Gargi College (W)",
+                    "seatMatrix": {
+                        "UR": "19",
+                        "SC": "7",
+                        "ST": "3",
+                        "OBC": "13",
+                        "Minority": "--",
+                        "EWS": "5"
+                    }
+                }
+            ]
+        }
+    ]
+}

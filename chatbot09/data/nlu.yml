@@ -1,0 +1,96 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny 
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?entity
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+ - intent: query_knowledge_base
+    examples: |
+      - what [undergrad]{"entity": "object_type", "value": "UG"} courses do you have?
+      - list some [UG]{"entity": "object_type", "value": "UG"} courses.
+      - can you name some [UG]{"entity": "object_type", "value": "UG"} courses please?
+      - can you show me some [UG]{"entity": "object_type", "value": "UG"} course options. 
+      - list courses with subject ["\bsanskrit\b"]{"entity": "name"} [UG]{"entity": "object_type", "value": "UG"}
+      - do you have any [Bachelor of Arts]{"entity": "Bachelor-stream"} [UG]{"entity": "object_type", "value": "UG"}?
+      - can you tell the [elegibility]{"entity": "attribute", "value": "elegibility"} of [that course]{"entity": "mention"}?
+     
+      - what is the [eligibility]{"entity": "attribute"} in [this]{"entity": "mention"} course?
+
+      - do you know  what [seatMatrix]{"entity": "attribute"} does the [last college]{"entity": "mention", "value": "LAST"} has?
+
+      - does [B.A. (Hons.) Sanskrit]{"entity": "UG"} is an [honours]{"entity": "attribute", "value": "honours"}course?
+      
+      - what is the [eligibility](attribute) of the [B.A. (Hons.) Sanskrit]{"enity":"attribute","value":"name"} course 
+
+
+
+- lookup: UG 
+  examples: |
+    - B.A. (Hons.) Sanskrit
+    - B.A. (Hons.) English
+
+
+- synonym: UG
+  examples: |
+    - Undergraduate
+    - UG
+    - Undergrad
+    - bachelor's degree
+    - bachelor's course
+    - ug
+    - Ug
+    - uG
+
