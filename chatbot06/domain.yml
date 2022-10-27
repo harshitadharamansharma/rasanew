@@ -5,29 +5,87 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
   - bot_challenge
+  - FirstName
+  - LastName
+  - Feedback
+  - request_details
+
+
+actions:
+  - utter_feedback
+  - utter_last_name
+  - utter_first_name
+  - utter_submit
+  - utter_thanks
+  - action_feedback_submit
+  - action_last_name
+  - action_feedback
+  - action_submit
+
+entities: 
+  - firstN
+  - lastN
+  - feedback
+
+# slots:
+#   concerts:
+#     type: list
+#     influence_conversation: false
+#     mappings:
+#     - type: custom
+
+slots:
+  firstN:
+    type: text
+    auto_fill: False
+  lastN:
+    type: text
+    auto_fill: False
+  feedback:
+    type: text
+    auto_fill: False
+
+
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey!"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  # utter_cheer_up:
+  # - text: "Here is something to cheer you up:"
+  #   image: "https://i.imgur.com/nGF1K8f.jpg"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  # utter_did_that_help:
+  # - text: "Did that help you?"
 
-  utter_happy:
-  - text: "Great, carry on!"
+  # utter_happy:
+  # - text: "Great, carry on!"
 
   utter_goodbye:
   - text: "Bye"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "I am a bot, powered by haha."
+
+  utter_first_name:
+  - text: "Please, provide your first name."
+
+
+  utter_last_name:
+  - text: "Please, provide your last name."
+
+
+  utter_feedback:
+  - text: "Please, provide your feedback."
+
+
+  utter_submit:
+  - text: "Do you want us to save your details for further procedures?"
+
+
+  utter_thanks:
+  - text: "Thanks for your valuable time; see you soon!"
 
 session_config:
   session_expiration_time: 60

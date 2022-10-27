@@ -93,30 +93,30 @@ nlu:
 
 - intent: FirstName
   examples: |
-    - Daman
+    - my firstname is [Daman](firstN)
     - Naman
     - Raman
     - Aman
     - Ruhi
-    - Harshita
+    - Harsh
     - Rahul
     - Kajal
-    - Japneet
+    - Japne
     - Raju
-    - Nakshatraa
+    - Naksh
 
 - intent: LastName
   examples: |
-    - Sharma
+    - my last namr is [Sharma](lastN)
     - verma
     - Yadav
     - Khan
-    - Barman
+    - Barma
     - Smith
     - Roy
-    - Kumar 
-    - Kumari  
-    - Saini
+    - KumarN
+    - KumarN
+    - SainiN
 
 - intent: Feedback 
   examples: |
@@ -124,6 +124,8 @@ nlu:
     - Amazing work
     - Wonderful experience
     - Thanks a lot
+    - good
+
 
 - intent: request_details
   examples: |

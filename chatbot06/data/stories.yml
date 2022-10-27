@@ -39,30 +39,36 @@ stories:
   - intent: request_details
   - action: utter_first_name
   - intent: FirstName
-  - action: utter_happy
+  - slot_was_set:
+    - firstN: Harshita
+  - action: action_last_name
+  - intent: LastName
+  - slot_was_set:
+    - lastN: Sharma
+  - action: action_feedback
+  - intent: Feedback
+  - slot_was_set:
+    - feedback:  good experience
+  - action: action_feedback_submit
+  - intent: affirm
+  - action: action_submit
 
-
-
-
-- story: query fantasy genre
+- story: sad path
   steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: query_books
-      entities:
-      - genres: fantasy
-      - object_type: book
-    - slot_was_set:
-      - object_type: book
-    - slot_was_set:
-      - genres: fantasy
-    - action: action_query_knowledge_base
-    - intent: know_more
-      entities:
-      - attribute: summary
-      - mention: '1'
-    - slot_was_set:
-      - mention: '1'
-    - slot_was_set:
-      - attribute: summary
-    - action: action_query_knowledge_base
+  - intent: request_details
+  - action: utter_first_name
+  - intent: FirstName
+  - slot_was_set:
+    - firstN: Harshita
+  - action: action_last_name
+  - intent: LastName
+  - slot_was_set:
+    - lastN: Sharma
+  - action: action_feedback
+  - intent: Feedback
+  - slot_was_set:
+    - feedback:  good experience
+  - action: action_feedback_submit
+  - intent: deny
+  - action: utter_thanks
+

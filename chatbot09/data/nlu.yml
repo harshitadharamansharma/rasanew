@@ -83,6 +83,26 @@ nlu:
     - B.A. (Hons.) English
 
 
+- synonym: B.A. (Hons.) Sanskrit
+  examples: |
+    - B.A. (Hons.) Sanskrit
+    - Sanskrit honours
+    - sanskrit h
+    - skt honors
+    - ba sanskrit
+    - sans
+
+- synonym: B.A. (Hons.) English
+  examples: |
+    - B.A. (Hons.) English
+    - English honours
+    - Englisht h
+    - eng honors
+    - ba English
+    - Eng
+    - Eng H
+
+
 - synonym: UG
   examples: |
     - Undergraduate
